@@ -1,7 +1,7 @@
 function [I, r, S] = regular_polyhedron_insphere(P, F, nb_samples, option_display)
 %% Function to compute and display the insphere of a regular polyhedron.
 %
-% Author : nicolas.douillet (at) free.fr, 2023-2024.
+% Author : nicolas.douillet9 (at) gmail.com, 2023-2024.
 %
 %
 % Syntax
@@ -127,7 +127,7 @@ assert(nb_vtx == 4 || nb_vtx == 6 || nb_vtx == 8 || nb_vtx == 12 || nb_vtx == 20
 I = mean(P,1);
 
 % Polyhedron circumsphere radius
-R = vecnorm((P(1,:)-I)',2)';
+R = sqrt(sum((P(1,:)-I).^2,2));
 
 
 switch nb_vtx
@@ -167,7 +167,7 @@ r = sqrt(R^2 - r0^2);
 S = cat(3,r*Sx+I(1),r*Sy+I(2),r*Sz+I(3));
 
 
-%% Display
+% Display
 if option_display
         
     cmap_tetra = cat(3,ones(size(Sx)),zeros(size(Sy)),zeros(size(Sz)));

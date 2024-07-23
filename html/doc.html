@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>regular_polyhedron_insphere</title><meta name="generator" content="MATLAB 9.7"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-05-24"><meta name="DC.source" content="doc.m"><style type="text/css">
+      --><title>regular_polyhedron_insphere</title><meta name="generator" content="MATLAB 9.7"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2024-07-23"><meta name="DC.source" content="doc.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>regular_polyhedron_insphere</h1><!--introduction--><p>Function to compute and display the insphere of a regular polyhedron.</p><p>Author &amp; support : nicolas.douillet (at) free.fr, 2023.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">See also</a></li><li><a href="#4">Input arguments</a></li><li><a href="#5">Output arguments</a></li><li><a href="#6">Example #1</a></li><li><a href="#7">Example #2</a></li><li><a href="#8">Example #3</a></li></ul></div><h2 id="1">Syntax</h2><p>regular_polyhedron_insphere(P, F);</p><p>regular_polyhedron_insphere(P, F, nb_samples);</p><p>regular_polyhedron_insphere(P, F, nb_samples, option_display);</p><p>[I, r, S] = regular_polyhedron_insphere(P, F, nb_samples, option_display);</p><h2 id="2">Description</h2><p>regular_polyhedron_insphere(P, F) computes and displays the insphere of polyhedron (P,F).</p><p>regular_polyhedron_insphere(P, F, nb_samples) uses nb_samples to mesh the sphere.</p><p>regular_polyhedron_insphere(P, F, nb_samples, option_display) displays the sphere when option_display is set either to logical true or real numeric 1, and doesn't when it is set to logical false or real numeric 0.</p><p>[I, r, S] = regular_polyhedron_insphere(P, F, nb_samples, option_display) stores the results in [I, r, S] vector.</p><h2 id="3">See also</h2><p>| <a href="https://fr.mathworks.com/matlabcentral/fileexchange/121133-tetrahedron-insphere?s_tid=prof_contriblnk">tetrahedron_insphere</a> |   <a href="https://fr.mathworks.com/matlabcentral/fileexchange/77446-platonic-solids?s_tid=prof_contriblnk">platonic_solids</a> |   <a href="https://fr.mathworks.com/matlabcentral/fileexchange/127574-regular-polygon-incircle?s_tid=srchtitle">regular_3D_polygon_incircle</a> |   <a href="https://fr.mathworks.com/matlabcentral/fileexchange/65574-tetrahedron-circumsphere?s_tid=prof_contriblnk">tetrahedron_circumsphere</a> |</p><h2 id="4">Input arguments</h2><pre>      [ | |  |]
+  </style></head><body><div class="content"><h1>regular_polyhedron_insphere</h1><!--introduction--><p>Function to compute and display the insphere of a regular polyhedron.</p><p>Author : nicolas.douillet9 (at) gmail.com, 2023-2024.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Syntax</a></li><li><a href="#2">Description</a></li><li><a href="#3">See also</a></li><li><a href="#4">Input arguments</a></li><li><a href="#5">Output arguments</a></li><li><a href="#6">Example #1</a></li><li><a href="#7">Example #2</a></li><li><a href="#8">Example #3</a></li></ul></div><h2 id="1">Syntax</h2><p>regular_polyhedron_insphere(P, F);</p><p>regular_polyhedron_insphere(P, F, nb_samples);</p><p>regular_polyhedron_insphere(P, F, nb_samples, option_display);</p><p>[I, r, S] = regular_polyhedron_insphere(P, F, nb_samples, option_display);</p><h2 id="2">Description</h2><p>regular_polyhedron_insphere(P, F) computes and displays the insphere of polyhedron (P,F).</p><p>regular_polyhedron_insphere(P, F, nb_samples) uses nb_samples to mesh the sphere.</p><p>regular_polyhedron_insphere(P, F, nb_samples, option_display) displays the sphere when option_display is set either to logical true or real numeric 1, and doesn't when it is set to logical false or real numeric 0.</p><p>[I, r, S] = regular_polyhedron_insphere(P, F, nb_samples, option_display) stores the results in [I, r, S] vector.</p><h2 id="3">See also</h2><p>| <a href="https://fr.mathworks.com/matlabcentral/fileexchange/121133-tetrahedron-insphere?s_tid=prof_contriblnk">tetrahedron_insphere</a> |   <a href="https://fr.mathworks.com/matlabcentral/fileexchange/77446-platonic-solids?s_tid=prof_contriblnk">platonic_solids</a> |   <a href="https://fr.mathworks.com/matlabcentral/fileexchange/127574-regular-polygon-incircle?s_tid=srchtitle">regular_3D_polygon_incircle</a> |   <a href="https://fr.mathworks.com/matlabcentral/fileexchange/65574-tetrahedron-circumsphere?s_tid=prof_contriblnk">tetrahedron_circumsphere</a> |</p><h2 id="4">Input arguments</h2><pre>      [ | |  |]
 - P = [Py Py Pz] : real matrix double. size(P,1) &#8364; {4,6,8,12,20}. size(P,2) = 3. The polyhedron vertex coordinates.
       [ | |  |]</pre><pre>      [|  |  | ]
 - F = [i1 i2 i3], positive integer matrix double, the face set. size(T) = [nb_faces,nb_vertex_per_faces].
@@ -82,11 +82,18 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 F = [1 2 3; 1 3 4; 1 4 2; 2 4 3];
 nb_samples = 60;
 [I,r] = regular_polyhedron_insphere(P,F,nb_samples,true) <span class="comment">% expected : I = [0 0 0]; r = 1/3;</span>
-</pre><pre class="codeoutput">I =
+</pre><pre class="codeoutput">
+I =
+
    1.0e-16 *
+
          0         0    0.2776
+
+
 r =
+
     0.3333
+
 </pre><img vspace="5" hspace="5" src="doc_01.png" alt=""> <h2 id="7">Example #2</h2><p>Cube / hexahedron</p><pre class="codeinput">P = [ 1  1  1;<span class="keyword">...</span>
      -1  1  1;<span class="keyword">...</span>
      -1 -1  1;<span class="keyword">...</span>
@@ -105,10 +112,16 @@ F = [1 2 3 4;<span class="keyword">...</span>
 
 nb_samples = 60;
 [I,r] = regular_polyhedron_insphere(P,F,nb_samples,true) <span class="comment">% expected : I = [0 0 0]; r = 1</span>
-</pre><pre class="codeoutput">I =
+</pre><pre class="codeoutput">
+I =
+
      0     0     0
+
+
 r =
+
      1
+
 </pre><img vspace="5" hspace="5" src="doc_02.png" alt=""> <h2 id="8">Example #3</h2><p>Regular octahedron</p><pre class="codeinput">P = [ 1  0  0;<span class="keyword">...</span>
       0  1  0;<span class="keyword">...</span>
      -1  0  0;
@@ -127,17 +140,23 @@ F = [1 2 5;<span class="keyword">...</span>
 
 nb_samples = 60;
 [I,r] = regular_polyhedron_insphere(P,F,nb_samples,true) <span class="comment">% expected : I = [0 0 0]; r = sqrt(3)/3</span>
-</pre><pre class="codeoutput">I =
+</pre><pre class="codeoutput">
+I =
+
      0     0     0
+
+
 r =
+
     0.5774
+
 </pre><img vspace="5" hspace="5" src="doc_03.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% regular_polyhedron_insphere
 %
 % Function to compute and display the insphere of a regular polyhedron.
 %
-% Author & support : nicolas.douillet (at) free.fr, 2023.
+% Author : nicolas.douillet9 (at) gmail.com, 2023-2024.
 %
 %
 %% Syntax

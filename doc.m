@@ -2,7 +2,7 @@
 %
 % Function to compute and display the insphere of a regular polyhedron.
 %
-% Author : nicolas.douillet (at) free.fr, 2023-2024.
+% Author : nicolas.douillet9 (at) gmail.com, 2023-2024.
 %
 %
 %% Syntax
